@@ -176,6 +176,71 @@ public class intro {
         head = prev;
       }
 
+      public void deleteNthfromend(int n){
+        int sz = 0;
+        Node temp = head;
+        while(temp!= null){
+            temp = temp.next;
+            sz++;
+        }
+        if(n == sz){    // if n is equal to size, remove first
+            head = head.next; // remove first
+            return;
+        }
+        int i = 1;
+        Node prev = head;
+        while(i < sz - n){ // sz - n - 1 is the index of the node before the one we want to delete
+            prev = prev.next;
+            i++;
+        }
+        prev.next = prev.next.next; // skip the node to be deleted
+      }
+
+    // Slow fast approach
+       public Node findMid(Node head){
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next; // move slow by 1
+            fast = fast.next.next; // move fast by 2
+        }
+        return slow; // slow will be at the mid node
+       }
+       
+       public boolean isPalindrome(){
+        if(head == null || head.next == null){
+            return true; // empty or single node is a palindrome
+        }
+        // Step 1 - Find mid
+        Node midNode = findMid(head);
+
+        // Step 2 - Reverse the second half
+        Node prev = null;
+        Node curr = midNode;
+        Node next;
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        Node right = prev; // This is the head of the reversed second half
+        Node left = head;
+
+       // Step 3 = check left half and right half
+       while(right != null){
+            if(left.data != right.data){
+                return false; // Not a palindrome
+            }
+            left = left.next;
+            right = right.next;
+        }
+        return true; // It is a palindrome
+
+       }
+         
+
 
     public static void main(String[] args) {
         intro ll = new intro();
@@ -190,15 +255,18 @@ public class intro {
         ll.print();
         ll.add(2, 9);
         ll.print();
-        ll.removeFirst();
+     //   ll.removeFirst();
+    //    ll.print();
+    //    ll.removelast();
+   //     ll.print();
+    //    System.out.println(ll.iterativeSearch(3));
+  //      System.out.println(ll.recSearch(4));
+ //       ll.reverse();
+ //       ll.print();
+     //   System.out.println(ll.size);
+        ll.deleteNthfromend(3);
         ll.print();
-        ll.removelast();
-        ll.print();
-        System.out.println(ll.iterativeSearch(3));
-        System.out.println(ll.recSearch(4));
-        ll.reverse();
-        ll.print();
-        System.out.println(ll.size);
+        System.out.println(ll.isPalindrome());
         
     }
 }
