@@ -104,39 +104,53 @@ public class Doublell {
     }
 
 
-    public void removeLast() {
+    public int removeLast() {
         if(head == null){ // check if list is empty
             System.out.println("List is empty");
-            return;
+            return Integer.MIN_VALUE;
         }
-        size--;
-        if(head == tail){  // check if there is only one element
+        
+        if(size == 1){ // check if there is only one element
+            int val = tail.data;
             head = null;
             tail = null;
-            return;
+            size--;
+            return val;
         }
+        int val = tail.data;
         tail = tail.prev;
         tail.next = null;
+        size--;
+        return val;
     }
 
-    public void removeAtIndex(int idx) {
+    public int removeAtIndex(int idx) {
+
+
+    if (idx < 0 || idx >= size) {
+        throw new IndexOutOfBoundsException("Invalid index");
+    }
         if(idx == 0){
-            removeFirst();
-            return;
+           return removeFirst();
+        
         }
         if(idx == size-1){
-            removeLast();
-            return;
+            return removeLast();
+            
         }
+
         Node temp = head;
         int i = 0;
-        while(i<idx-1){
-            i++;
+        while(i<idx){
             temp = temp.next;
+            i++;
         }
+        int val = temp.data;
+
+        temp.prev.next = temp.next;
+        temp.next.prev = temp.prev;
         size--;
-        temp.next = temp.next.next;
-        temp.next.prev = temp;
+        return val;
     }
 
 
@@ -155,6 +169,22 @@ public class Doublell {
     }
 
 
+    public void reverse(){
+        Node curr = head;
+        Node prev = null; 
+        Node next = null;
+        while(curr != null){
+            next = curr.next; // store next node
+            curr.next = prev; // reverse the link
+            curr.prev = next; // set prev to next
+            prev = curr; // move prev to current
+            curr = next; // move to next node
+        }
+
+        head = prev; // update head to the last node
+    }
+
+
     static public void main(String[] args) {
         Doublell dll = new Doublell();
         dll.addFirst(3);
@@ -162,8 +192,11 @@ public class Doublell {
         dll.addFirst(1);
 
         dll.print();
-        System.out.println(dll.size);
-        dll.removeFirst();
-        dll.print();
+      //  System.out.println(dll.size);
+     //   dll.removeFirst();
+     //   dll.print();
+
+     dll.reverse();
+     dll.print();
     }
 }
