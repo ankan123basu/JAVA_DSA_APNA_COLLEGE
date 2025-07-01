@@ -44,37 +44,41 @@ public class Circularll {
     }
 
     // Remove first
-    public void removeFirst() {
+    public int removeFirst() {
         if (head == null) {
             System.out.println("List is empty");
-            return;
+            return Integer.MIN_VALUE;
         }
+        int val = head.data;
         size--;
         if (head == tail) {
             head = tail = null;
-            return;
+            return val;
         }
         head = head.next;
         tail.next = head;
+        return val;
     }
 
     // Remove last
-    public void removeLast() {
+    public int removeLast() {
         if (head == null) {
             System.out.println("List is empty");
-            return;
+            return Integer.MIN_VALUE;
         }
+        int val = tail.data;
         size--;
         if (head == tail) {
             head = tail = null;
-            return;
+            return val; 
         }
         Node temp = head;
         while (temp.next != tail) {
             temp = temp.next;
         }
-        temp.next = head;
         tail = temp;
+        tail.next = head; // maintain circular link
+        return val;
     }
 
     // Print list
@@ -84,12 +88,15 @@ public class Circularll {
             return;
         }
         Node temp = head;
-        do {
             System.out.print(temp.data + " -> ");
             temp = temp.next;
-        } while (temp != head);
+        while (temp != head) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
         System.out.println("(back to head)");
-    }
+        }
+    
 
     // Get current size
     public int getSize() {
