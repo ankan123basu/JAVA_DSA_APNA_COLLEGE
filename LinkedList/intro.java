@@ -196,6 +196,34 @@ public class intro {
         prev.next = prev.next.next; // skip the node to be deleted
       }
 
+      //                 or  
+      /* 
+
+        public void deleteNthfromend2(int n){
+            Node fast = head;
+            Node slow = head;
+    
+            // Move fast pointer n steps ahead
+            for(int i = 0; i < n; i++){
+                fast = fast.next;
+            }
+    
+            // If fast is null, it means we need to remove the head
+            if(fast == null){
+                head = head.next;
+                return;
+            }
+    
+            // Move both pointers until fast reaches the end
+            while(fast.next != null){
+                slow = slow.next;
+                fast = fast.next;
+            }
+            // Now slow is at the node before the one we want to delete
+            slow.next = slow.next.next; // skip the node to be deleted
+        }  */
+
+
     // Slow fast approach
        public Node findMid(Node head){
         Node slow = head;
