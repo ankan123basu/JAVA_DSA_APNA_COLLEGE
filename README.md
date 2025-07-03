@@ -6,15 +6,15 @@
   ![DSA](https://img.shields.io/badge/DSA-4A90E2?style=for-the-badge&logo=databricks&logoColor=white)
   ![Apna College](https://img.shields.io/badge/Apna_College-FF6B6B?style=for-the-badge&logo=apachespark&logoColor=white)
   
-  <img src="https://komarev.com/ghpvc/?username=yourusername&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" />
+  <img src="https://komarev.com/ghpvc/?username=ankan123basu&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" />
 </div>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">
   <h3>Namaste! Welcome to my DSA Journey with Apna College! 🙏</h3>
   
-  [![GitHub stars](https://img.shields.io/github/stars/username/repo?style=social)](https://github.com/username/repo/stargazers)
-  [![GitHub forks](https://img.shields.io/github/forks/username/repo?style=social)](https://github.com/username/repo/network/members)
+  [![GitHub followers](https://img.shields.io/github/followers/ankan123basu?style=social)](https://github.com/ankan123basu?tab=followers)
+  [![GitHub stars](https://img.shields.io/github/stars/ankan123basu?style=social)](https://github.com/ankan123basu?tab=repositories)
 </div>
 
 ## 🚀 About This Repository
@@ -67,8 +67,8 @@ Problems:       [█████░░░░░] 50%
 ## 📈 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical" alt="GitHub Stats" width="400"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=yourusername&theme=radical" alt="GitHub Streak" width="400"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=ankan123basu&show_icons=true&theme=radical" alt="GitHub Stats" width="400"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ankan123basu&theme=radical" alt="GitHub Streak" width="400"/>
 </div>
 
 ## 🎯 Daily Coding Motivation
@@ -86,23 +86,20 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 <div align="center">
-  <h3>Made with ❤️ by Your Name</h3>
+  <h3>Made with ❤️ by Ankan Basu</h3>
   <p>Connect with me:</p>
-  <a href="https://linkedin.com/in/yourprofile">
+  <a href="https://linkedin.com/in/ankan-basu-595152271/">
     <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"/>
   </a>
-  <a href="https://twitter.com/yourhandle">
-    <img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter"/>
-  </a>
-  <a href="https://github.com/yourusername">
+  <a href="https://github.com/ankan123basu">
     <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub"/>
   </a>
   
-  ![Visitor Count](https://profile-counter.glitch.me/{yourusername}/count.svg)
+  ![Visitor Count](https://profile-counter.glitch.me/ankan123basu/count.svg)
 </div>
 
 ---
 
 <div align="center">
-  <img src="https://github.com/yourusername/your-repo/raw/main/assets/coding.gif" alt="Coding" width="300"/>
+  <img src="https://github.com/ankan123basu/ankan123basu/raw/main/assets/coding.gif" alt="Coding" width="300"/>
 </div>
