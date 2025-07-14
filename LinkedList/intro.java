@@ -160,7 +160,22 @@ public class intro {
         return helper(head, key);
 
       }
+ 
+      //Array to LinkedList
+      public static Node ArrtoLL(int arr[]) {
+    if (arr == null || arr.length == 0) return null;
 
+    Node head = new Node(arr[0]);
+    Node mover = head;
+
+    for (int i = 1; i < arr.length; i++) {
+        Node newNode = new Node(arr[i]);
+        mover.next = newNode;
+        mover = mover.next;
+    }
+
+    return head; // return the head of the linked list
+}
 
       public void reverse(){  // O(n)
         Node prev = null;
